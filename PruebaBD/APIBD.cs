@@ -33,7 +33,7 @@ namespace PruebaBD
         {
             const string INSTRUCCION = "SELECT * FROM Clientes";
             // Recursos
-            DataSet datos = null;
+            DataSet datos = null; // Carga los datos de la consulta
             SqlConnection conexionBD = null;
             SqlDataAdapter bridgeBD = null; // Para crear una unión
 
