@@ -35,7 +35,8 @@ namespace PruebaBD
             // Recursos
             DataSet datos = null; // Carga los datos de la consulta
             SqlConnection conexionBD = null;
-            SqlDataAdapter bridgeBD = null; // Para crear una unión
+            SqlDataAdapter bridgeBD = null; // Para crear una unión entre la
+                                            // base de datos y el programa
 
             // Inicializamos el DataSet
             datos = new DataSet();
