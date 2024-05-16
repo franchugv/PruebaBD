@@ -14,8 +14,8 @@ namespace PruebaBD
         // Constantes
 
         private const string CADENA_CONEXION = 
-            "Data Source=(localdb)\\MSSQLLocalDB; " + // Nombre de la base de datos PUNTO Y COMA ;
-            "Initial Catalog=Contactos; " + // Nombre de la Tabla PUNTO Y COMA ;
+            "Data Source=(localdb)\\MSSQLLocalDB; " + // Nombre de la base de datos PUNTO Y COMA y espacio en blanco ;
+            "Initial Catalog=Contactos; " + // Nombre de la Tabla PUNTO Y COMA  y espacio en blanco;
             "Integrated Security=true"; // Establecer seguridad por defecto Aquí no
 
         // Métodos Privados
