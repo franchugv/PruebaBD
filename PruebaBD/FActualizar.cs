@@ -38,7 +38,7 @@ namespace PruebaBD
             nuevoCliente = new Cliente(textBoxNombre.Text, textBoxApellidos.Text, maskedTextBoxTelefono.Text);
 
             // Construir sentencia SQL (INSERT)
-            instrucción = $"INSERT INTO Clientes VALUES " +
+            instrucción = $"UPDATE Clientes SET {} VALUES " +
             $"('{nuevoCliente.Nombre}', '{nuevoCliente.Apellidos}', '{nuevoCliente.Telefono}')";
 
             // Ejecutar la Instrucción
