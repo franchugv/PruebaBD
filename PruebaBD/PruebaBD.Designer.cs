@@ -30,6 +30,7 @@
         {
             this.listBoxClientes = new System.Windows.Forms.ListBox();
             this.buttonClientesCargar = new System.Windows.Forms.Button();
+            this.buttonNuevoCliente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBoxClientes
@@ -50,11 +51,22 @@
             this.buttonClientesCargar.UseVisualStyleBackColor = true;
             this.buttonClientesCargar.Click += new System.EventHandler(this.Controlador_Click);
             // 
+            // buttonNuevoCliente
+            // 
+            this.buttonNuevoCliente.Location = new System.Drawing.Point(46, 248);
+            this.buttonNuevoCliente.Name = "buttonNuevoCliente";
+            this.buttonNuevoCliente.Size = new System.Drawing.Size(332, 23);
+            this.buttonNuevoCliente.TabIndex = 2;
+            this.buttonNuevoCliente.Text = "Nuevo Cliente";
+            this.buttonNuevoCliente.UseVisualStyleBackColor = true;
+            this.buttonNuevoCliente.Click += new System.EventHandler(this.buttonNuevoCliente_Click);
+            // 
             // PruebaBD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(430, 296);
+            this.Controls.Add(this.buttonNuevoCliente);
             this.Controls.Add(this.buttonClientesCargar);
             this.Controls.Add(this.listBoxClientes);
             this.Name = "PruebaBD";
@@ -67,6 +79,7 @@
 
         private System.Windows.Forms.ListBox listBoxClientes;
         private System.Windows.Forms.Button buttonClientesCargar;
+        private System.Windows.Forms.Button buttonNuevoCliente;
     }
 }
 

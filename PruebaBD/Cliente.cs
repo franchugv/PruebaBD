@@ -38,6 +38,7 @@ namespace PruebaBD
             }
             set
             {
+                if (string.IsNullOrEmpty(value)) throw new Exception("Cadena vacía");
                 _nombre = value;
             }
         }

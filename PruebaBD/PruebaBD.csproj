@@ -48,6 +48,18 @@
   <ItemGroup>
     <Compile Include="APIBD.cs" />
     <Compile Include="Cliente.cs" />
+    <Compile Include="FActualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FActualizar.Designer.cs">
+      <DependentUpon>FActualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FInsertar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FInsertar.Designer.cs">
+      <DependentUpon>FInsertar.cs</DependentUpon>
+    </Compile>
     <Compile Include="PruebaBD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,6 +68,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FActualizar.resx">
+      <DependentUpon>FActualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FInsertar.resx">
+      <DependentUpon>FInsertar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

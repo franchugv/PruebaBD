@@ -33,5 +33,18 @@ namespace PruebaBD
            }
 
         }
+
+        private void buttonNuevoCliente_Click(object sender, EventArgs e)
+        {
+            // RECURSOS
+            FInsertar formulario = null;
+
+            // Le damos presencia al formulario en memoria
+            formulario = new FInsertar();
+
+            // Lo mustra si cerrar la otra aplicación
+            formulario.ShowDialog();
+
+        }
     }
 }

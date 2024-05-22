@@ -19,6 +19,7 @@ namespace PruebaBD
             "Integrated Security=true"; // Establecer seguridad por defecto Aquí no
 
         // Métodos Privados
+        // 1. Establecemos la conexión
         private static SqlConnection EstablecerConexion()
         {
             SqlConnection conexion = null;
@@ -28,7 +29,8 @@ namespace PruebaBD
             return conexion;
         }
 
-        
+        // 2. Cargamos la lista de la base de datos haciendo uso del DataSet,
+        // este es muy peseado
         private static DataSet ObtenerClientes()
         {
             const string INSTRUCCION = "SELECT * FROM Clientes";
@@ -59,7 +61,7 @@ namespace PruebaBD
 
 
         // Métodos Públicos
-
+        // 3. Obtenemos el Objeto de cliebtes
         public static Cliente[] ObtenerListaCliente()
         {
             // Recursos
@@ -71,7 +73,7 @@ namespace PruebaBD
             datosClientes = ObtenerClientes();
 
             // Obtener el número de clientes que hay en la tabla
-            numClientes = datosClientes.Tables["Clientes"].Rows.Count;
+            numClientes = datosClientes.Tables["Clientes"].Rows.Count; // Array Asociativo
             
             // Array con el tamaño de la cantidad de clientes que tenemos
             listaClientes = new Cliente[numClientes];
@@ -82,13 +84,50 @@ namespace PruebaBD
             {
                 fila = datosClientes.Tables["Clientes"].Rows[indice];
 
-                // Asignamos el valor de la fina la la clase Cliente
+                // Asignamos el valor de la fina la la clase Cliente, Array Asociativo
                 listaClientes[indice] = new Cliente((string)fila["Nombre"], (string)fila["Apellidos"], (string)fila["Telefono"]);
             }
 
             return listaClientes;
         }
 
+
+        public static void EjecutarInstruccion(string Instruccion)
+        {
+            SqlConnection conexion = null;
+            SqlCommand comando = null;
+
+            // Hacemos el try catch para que en caso de error se cierre la coexión,
+            // hay que recordar que el método tiene que ser independiente de la interfaz,
+            // En la interfaz nos encatgaremos de mostrar el error
+            try 
+            {
+            // Conexión creada previamente
+            conexion = EstablecerConexion(); 
+
+            // Al comando hay que pasarle la instrucción
+            // y la conexión de la base de datos que decidamos
+
+            comando = new SqlCommand(Instruccion, conexion);
+
+            conexion.Open();
+
+            // Ejecución de la isntrucción, no es una consulta,
+            // Insert, Update y Delete
+            comando.ExecuteNonQuery();
+            }
+            catch(Exception error)
+            {
+                // Relanzamos la exepción para no perder la independencia
+                throw error;
+            }
+            finally
+            {
+                conexion.Close(); // No olvidar cerrar la conexión
+
+            }
+
+        }
 
     }
 }
