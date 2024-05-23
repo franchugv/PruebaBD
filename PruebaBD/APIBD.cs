@@ -97,9 +97,9 @@ namespace PruebaBD
             SqlConnection conexion = null;
             SqlCommand comando = null;
 
-            // Hacemos el try catch para que en caso de error se cierre la coexión,
+            // Hacemos el try catch para que en caso de error se cierre la conexión,
             // hay que recordar que el método tiene que ser independiente de la interfaz,
-            // En la interfaz nos encatgaremos de mostrar el error
+            // En la interfaz nos encargaremos de mostrar el error
             try 
             {
             // Conexión creada previamente
@@ -118,7 +118,7 @@ namespace PruebaBD
             }
             catch(Exception error)
             {
-                // Relanzamos la exepción para no perder la independencia
+                // Relanzamos la excepción para no perder la independencia
                 throw error;
             }
             finally
