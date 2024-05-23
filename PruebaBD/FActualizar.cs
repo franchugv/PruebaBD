@@ -20,7 +20,7 @@ namespace PruebaBD
         private void buttonInsertar_Click(object sender, EventArgs e)
         {
 
-            // Recurosos
+            // Recursos
 
             string instrucción = null;
             Cliente nuevoCliente = null;
@@ -38,8 +38,7 @@ namespace PruebaBD
             nuevoCliente = new Cliente(textBoxNombre.Text, textBoxApellidos.Text, maskedTextBoxTelefono.Text);
 
             // Construir sentencia SQL (INSERT)
-            instrucción = $"UPDATE Clientes SET {} VALUES " +
-            $"('{nuevoCliente.Nombre}', '{nuevoCliente.Apellidos}', '{nuevoCliente.Telefono}')";
+            instrucción = $"UPDATE Clientes SET Telefono = '{nuevoCliente.Telefono}' WHERE Nombre = '{nuevoCliente.Nombre}' AND Apellidos = '{nuevoCliente.Apellidos}'";
 
             // Ejecutar la Instrucción
 

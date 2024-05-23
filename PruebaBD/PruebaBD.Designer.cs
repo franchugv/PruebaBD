@@ -31,6 +31,8 @@
             this.listBoxClientes = new System.Windows.Forms.ListBox();
             this.buttonClientesCargar = new System.Windows.Forms.Button();
             this.buttonNuevoCliente = new System.Windows.Forms.Button();
+            this.buttonUpdate = new System.Windows.Forms.Button();
+            this.buttonBorrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBoxClientes
@@ -43,7 +45,7 @@
             // 
             // buttonClientesCargar
             // 
-            this.buttonClientesCargar.Location = new System.Drawing.Point(46, 218);
+            this.buttonClientesCargar.Location = new System.Drawing.Point(46, 198);
             this.buttonClientesCargar.Name = "buttonClientesCargar";
             this.buttonClientesCargar.Size = new System.Drawing.Size(332, 23);
             this.buttonClientesCargar.TabIndex = 1;
@@ -53,7 +55,7 @@
             // 
             // buttonNuevoCliente
             // 
-            this.buttonNuevoCliente.Location = new System.Drawing.Point(46, 248);
+            this.buttonNuevoCliente.Location = new System.Drawing.Point(46, 227);
             this.buttonNuevoCliente.Name = "buttonNuevoCliente";
             this.buttonNuevoCliente.Size = new System.Drawing.Size(332, 23);
             this.buttonNuevoCliente.TabIndex = 2;
@@ -61,11 +63,33 @@
             this.buttonNuevoCliente.UseVisualStyleBackColor = true;
             this.buttonNuevoCliente.Click += new System.EventHandler(this.buttonNuevoCliente_Click);
             // 
+            // buttonUpdate
+            // 
+            this.buttonUpdate.Location = new System.Drawing.Point(46, 256);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(332, 23);
+            this.buttonUpdate.TabIndex = 3;
+            this.buttonUpdate.Text = "Actualizar Cliente";
+            this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
+            // 
+            // buttonBorrar
+            // 
+            this.buttonBorrar.Location = new System.Drawing.Point(46, 285);
+            this.buttonBorrar.Name = "buttonBorrar";
+            this.buttonBorrar.Size = new System.Drawing.Size(332, 23);
+            this.buttonBorrar.TabIndex = 5;
+            this.buttonBorrar.Text = "Borrar Cliente";
+            this.buttonBorrar.UseVisualStyleBackColor = true;
+            this.buttonBorrar.Click += new System.EventHandler(this.buttonBorrar_Click);
+            // 
             // PruebaBD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 296);
+            this.ClientSize = new System.Drawing.Size(430, 331);
+            this.Controls.Add(this.buttonBorrar);
+            this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonNuevoCliente);
             this.Controls.Add(this.buttonClientesCargar);
             this.Controls.Add(this.listBoxClientes);
@@ -80,6 +104,8 @@
         private System.Windows.Forms.ListBox listBoxClientes;
         private System.Windows.Forms.Button buttonClientesCargar;
         private System.Windows.Forms.Button buttonNuevoCliente;
+        private System.Windows.Forms.Button buttonUpdate;
+        private System.Windows.Forms.Button buttonBorrar;
     }
 }
 

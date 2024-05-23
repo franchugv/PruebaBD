@@ -46,5 +46,26 @@ namespace PruebaBD
             formulario.ShowDialog();
 
         }
+
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            // RECURSOS
+            FActualizar formularioUpdate = null;
+
+            // Le damos presencia al formulario en memoria
+            formularioUpdate = new FActualizar();
+
+            // Lo mustra si cerrar la otra aplicación
+            formularioUpdate.ShowDialog();
+        }
+
+        private void buttonBorrar_Click(object sender, EventArgs e)
+        {
+            FormEliminar formmeliminar = null;
+
+            formmeliminar = new FormEliminar();
+
+            formmeliminar.ShowDialog();
+        }
     }
 }

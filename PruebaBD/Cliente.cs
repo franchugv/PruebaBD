@@ -28,6 +28,12 @@ namespace PruebaBD
             Telefono = telefono;
         }
 
+        public Cliente(string nombre, string apellidos)
+        {
+            Nombre = nombre;
+            Apellidos = apellidos;
+        }
+
         // Propiedades
 
         public string Nombre
@@ -38,7 +44,6 @@ namespace PruebaBD
             }
             set
             {
-                if (string.IsNullOrEmpty(value)) throw new Exception("Cadena vacía");
                 _nombre = value;
             }
         }
